@@ -1,0 +1,127 @@
+.container{
+    position: sticky;
+}
+
+
+.top_navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    border-bottom: var(--ui-border);
+}
+
+.logo_container{    
+    position: relative;    
+    height: 65%;         
+    width: 150px;  
+}
+
+.main_navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    border-bottom: var(--ui-border);
+}
+ 
+.search_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline-start: 1rem;
+}
+
+.search_container div svg{  
+    transform: translateY(1px); 
+    width: 24px;
+    height: 24px;
+}
+
+.search_container h4{
+    padding-inline-start: 0.5rem;
+}
+
+.hamburger_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger_container h4{
+    padding-inline-end: 0.5rem;
+}
+
+.search_container h4, .hamburger_container h4{
+    font-family: 'gotham-light';
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.hamburger_menu{
+    display: flex;
+    position: relative;
+    padding-inline-end: 1rem;
+}
+
+.hamburger{
+    width: 1.625rem;
+    height: 0.125rem;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburger::before{
+    content: "";
+    position: absolute;
+    width: 1.625rem;
+    height: 2px;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transition: transform 0.2s ease-in-out;     
+    transform: translate(-13px,-7px);     
+}
+
+.hamburger::after{
+    content: "";
+    position: absolute;
+    width: 1.625rem;
+    height: 2px;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transition: transform 0.2s ease-in-out; 
+    transform: translate(-13px,7px);     
+}
+
+.hamburger_open{
+    width: 1.625rem;
+    height: 0.125rem;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transform: translateX(-14px);
+    background-color: transparent;
+    transition: transform 0.1s ease-in-out;    
+}
+
+.hamburger_open::before{
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transition: transform 0.2s ease-in-out; 
+    transform: rotate(45deg) translate(0px,0px);     
+}
+
+.hamburger_open::after{
+    content: "";
+    position: absolute;
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--ui-white);
+    border-radius: 100vw;
+    transition: transform 0.2s ease-in-out; 
+    transform: rotate(-45deg) translate(0px,0px);    
+}
