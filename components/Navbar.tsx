@@ -21,7 +21,9 @@ function Navbar() {
                 <div><AiOutlineSearch/></div>
                 <h4>Search</h4>
             </div>
-            <ul className={Styles.nav_menu}></ul>
+            <ul className={Styles.nav_menu}>
+                
+            </ul>
             <div className={Styles.hamburger_container}>
                 <h4>Menu</h4>
                 <button className={Styles.hamburger_menu} onClick={() => setOpen(!open)}>
