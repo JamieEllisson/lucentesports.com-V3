@@ -135,8 +135,8 @@ main{
 }
 
 .socials_list a svg{
-  height: 18px;
-  width: 18px;
+  height: 24px;
+  width: 24px;
 }
 
 .latest_news{
@@ -207,6 +207,7 @@ main{
 
 .news_details h2{
   text-transform: uppercase;
+  font-family: 'gotham';
   font-size: 14px;
   line-height: 20px;
   padding-block-start: 0.5rem;
@@ -227,8 +228,10 @@ button[role=see_more]{
   margin: 1.5rem auto 0.5rem auto;  
   font-family: 'gotham';
   text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
   width: fit-content;
-  padding: 0.5rem 2rem;  
+  padding: 0.5rem 4rem;  
   color: var(--ui-grey-light);
   border: solid 1px var(--ui-grey-light);
   border-radius: 100vw;
@@ -238,4 +241,58 @@ button[role=see_more]:hover{
   color: var(--font-clr-light);
   border-color: var(--font-clr-light);
 }
+
+.teams_grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.team_container{
+  width: 100%;
+  height: 80px;
+  padding-inline: 1rem;
+}
+
+.game_image_container{
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  outline: solid 1px var(--ui-white); 
+}
+
+.game_image_container:hover .game_image {
+  filter: blur(2px);
+  opacity: 0.6;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.game_logo_container{ 
+  position: relative; 
+  width: 15%;
+  height: 100%;
+  margin-inline: auto;  
+  transform: scale(0.75);
+  opacity: 0;
+}
+
+.game_logo_container-csgo{
+  position: relative; 
+  width: 25%;
+  height: 100%;
+  margin-inline: auto;
+  opacity: 0;
+  transform: scale(1.1);
+  filter: invert(100%);
+}
+
+.game_image_container:hover .game_logo_container,.game_image_container:hover .game_logo_container-csgo{
+  opacity: 1;
+  transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+
+
 

@@ -7,6 +7,12 @@ import { sanityClient } from '../lib/sanity.server'
 import { urlFor } from "../lib/sanity"
 import { Article } from '../typings'
 import { FaTwitterSquare, FaLinkedin, FaInstagram, FaFacebookSquare, FaYoutube, FaTwitch, FaDiscord } from 'react-icons/fa'
+import LeagueOfLegends from '../public/img/leagueoflegends.jpg'
+import CSGO from '../public/img/csgo.jpg'
+import FIFA from '../public/img/fifa.jpg'
+import GameLogo1 from '../public/img/leagueoflegends-logo.png'
+import GameLogo2 from '../public/img/csgo.png'
+import GameLogo3 from '../public/img/fifa.png'
 
 function Home({ articles }:Props) {
 
@@ -49,7 +55,39 @@ function Home({ articles }:Props) {
           <button role='see_more' onClick={() => router.push('/news')}>See All News</button>
         </section>
         <section>
+          <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3></div>
+          <div className='teams_grid'>
+            <div className='team_container'>
+              <div className='game_image_container'>
+                <Image id='leagueoflegends' className='game_image' src={LeagueOfLegends} alt='' layout='fill' objectFit='cover' loading='lazy'/>
+                <div className='game_logo_container'>
+                  <Image src={GameLogo1} alt='' layout='fill' objectFit='contain'/>
+                </div>
+              </div>              
+            </div>
+            <div className='team_container'>
+              <div className='game_image_container'>
+                <Image id='csgo' className='game_image' src={CSGO} alt='' layout='fill' objectFit='cover' objectPosition='top' loading='lazy'/>
+                <div className='game_logo_container-csgo'>
+                  <Image id='csgo-logo' src={GameLogo2} alt='' layout='fill' objectFit='contain'/>
+                </div>
+              </div>              
+            </div>   
+            <div className='team_container'>
+              <div className='game_image_container'>
+                <Image id='csgo' className='game_image' src={FIFA} alt='' layout='fill' objectFit='cover' loading='lazy'/>
+                <div className='game_logo_container-csgo'>
+                  <Image src={GameLogo3} alt='' layout='fill' objectFit='contain'/>
+                </div>
+              </div>              
+            </div>                                            
+          </div>          
+        </section>
+        <section>
           <div className='section_heading_container'><div className='pill'></div><h3>Recent Matches</h3></div>
+        </section>
+        <section>
+          <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3></div>
         </section>
       </main>
     </>
