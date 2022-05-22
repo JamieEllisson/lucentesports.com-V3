@@ -23,13 +23,35 @@ function Navbar() {
             </div>
             <ul className={Styles.nav_menu}>
                 
-            </ul>
+            </ul>            
             <div className={Styles.hamburger_container}>
                 <h4>Menu</h4>
                 <button className={Styles.hamburger_menu} onClick={() => setOpen(!open)}>
                     <span className={open ? Styles.hamburger_open : Styles.hamburger}></span>
                 </button>
             </div>
+        </nav>
+        <nav className={open ? Styles.mobile_menu_open: Styles.mobile_menu}>
+            <ul className={Styles.mobile_nav_menu}>
+                <Link href='/'>
+                   <li><a>Home</a></li> 
+                </Link>
+                <Link href='/news'>
+                   <li><a>News</a></li> 
+                </Link>
+                <Link href='/teams'>
+                   <li><a>Teams</a></li> 
+                </Link>
+                <Link href='#'>
+                   <li><a>Fixtures</a></li> 
+                </Link>
+                <Link href='#'>
+                   <li><a>Shop</a></li> 
+                </Link>
+                <Link href='#'>
+                   <li><a>About</a></li> 
+                </Link>                            
+            </ul>
         </nav>                    
     </header>
   )

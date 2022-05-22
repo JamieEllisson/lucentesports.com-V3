@@ -80,6 +80,7 @@ body{
 }
 
 main{
+  position: relative;
   min-height: 80vh;
   margin-inline: auto;
   padding-block-end: 1rem;
@@ -94,9 +95,14 @@ main{
   font-family: 'gotham';
 }
 
+.slide_container{
+  z-index: 1;
+}
+
 .image_container{  
   width: 100%;
   max-height: 80vh;  
+  z-index: 1;
 }
 
 .prevArrow,.nextArrow{

@@ -1,5 +1,8 @@
 .container{
     position: sticky;
+    z-index: 50;
+    top: 0;
+    background-color: var(--bg-dark-opacity90);
 }
 
 
@@ -124,4 +127,26 @@
     border-radius: 100vw;
     transition: transform 0.2s ease-in-out; 
     transform: rotate(-45deg) translate(0px,0px);    
+}
+
+.mobile_menu,.mobile_menu_open{
+    width: 100%;
+    height: min-content;
+    background-color: var(--bg-dark-opacity90);
+    position: absolute;   
+    z-index: 50;
+    text-align: center;
+    border-bottom: var(--ui-border);
+}
+
+.mobile_menu li,.mobile_menu_open li{
+    padding: 1rem;
+}
+
+.mobile_menu{
+    top: -500px;
+}
+
+.mobile_menu_open{
+    top: calc(0px + 5.5rem);   
 }
