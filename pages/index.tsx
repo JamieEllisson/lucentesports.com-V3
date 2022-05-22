@@ -26,11 +26,11 @@ function Home({ articles }:Props) {
         <Slideshow/>
         <section className='socials'>
           <ul className='socials_list'>
-            <a href='#'><FaTwitterSquare/></a>
-            <a href='#'><FaLinkedin/></a>
+            <a href='https://twitter.com/Lucent_Esports'><FaTwitterSquare/></a>
+            <a href='https://www.linkedin.com/company/lucentesports/'><FaLinkedin/></a>
             <a href='#'><FaFacebookSquare/></a>
-            <a href='#'><FaInstagram/></a>
-            <a href='#'><FaYoutube/></a>
+            <a href='https://www.instagram.com/lucentesports/'><FaInstagram/></a>
+            <a href='https://www.youtube.com/channel/UCzO-kkwhMXtv1oPzI7qoQgA'><FaYoutube/></a>
             <a href='#'><FaTwitch/></a>
             <a href='#'><FaDiscord/></a>
           </ul>
@@ -57,30 +57,36 @@ function Home({ articles }:Props) {
         <section>
           <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3></div>
           <div className='teams_grid'>
-            <div className='team_container'>
-              <div className='game_image_container'>
-                <Image id='leagueoflegends' className='game_image' src={LeagueOfLegends} alt='' layout='fill' objectFit='cover' loading='lazy'/>
-                <div className='game_logo_container'>
-                  <Image src={GameLogo1} alt='' layout='fill' objectFit='contain'/>
-                </div>
-              </div>              
-            </div>
-            <div className='team_container'>
-              <div className='game_image_container'>
-                <Image id='csgo' className='game_image' src={CSGO} alt='' layout='fill' objectFit='cover' objectPosition='top' loading='lazy'/>
-                <div className='game_logo_container-csgo'>
-                  <Image id='csgo-logo' src={GameLogo2} alt='' layout='fill' objectFit='contain'/>
-                </div>
-              </div>              
-            </div>   
-            <div className='team_container'>
-              <div className='game_image_container'>
-                <Image id='csgo' className='game_image' src={FIFA} alt='' layout='fill' objectFit='cover' loading='lazy'/>
-                <div className='game_logo_container-csgo'>
-                  <Image src={GameLogo3} alt='' layout='fill' objectFit='contain'/>
-                </div>
-              </div>              
-            </div>                                            
+            <Link href='/teams/leagueoflegends'>
+              <div className='team_container'>
+                <div className='game_image_container'>
+                  <Image id='leagueoflegends' className='game_image' src={LeagueOfLegends} alt='' layout='fill' objectFit='cover' loading='lazy'/>
+                  <div className='game_logo_container'>
+                    <Image src={GameLogo1} alt='' layout='fill' objectFit='contain'/>
+                  </div>
+                </div>              
+              </div>
+            </Link>
+            <Link href='/teams/csgo'>
+              <div className='team_container'>
+                <div className='game_image_container'>
+                  <Image id='csgo' className='game_image' src={CSGO} alt='' layout='fill' objectFit='cover' objectPosition='top' loading='lazy'/>
+                  <div className='game_logo_container-csgo'>
+                    <Image id='csgo-logo' src={GameLogo2} alt='' layout='fill' objectFit='contain'/>
+                  </div>
+                </div>              
+              </div>
+            </Link>
+            <Link href='/teams/fifa'>
+              <div className='team_container'>
+                <div className='game_image_container'>
+                  <Image id='csgo' className='game_image' src={FIFA} alt='' layout='fill' objectFit='cover' loading='lazy'/>
+                  <div className='game_logo_container-csgo'>
+                    <Image src={GameLogo3} alt='' layout='fill' objectFit='contain'/>
+                  </div>
+                </div>              
+              </div> 
+            </Link>                                           
           </div>          
         </section>
         <section>

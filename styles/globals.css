@@ -261,6 +261,11 @@ button[role=see_more]:hover{
   outline: solid 1px var(--ui-white); 
 }
 
+.game_image{
+  filter: blur(2px);
+  opacity: 0.6;
+}
+
 .game_image_container:hover .game_image {
   filter: blur(2px);
   opacity: 0.6;
@@ -273,7 +278,7 @@ button[role=see_more]:hover{
   height: 100%;
   margin-inline: auto;  
   transform: scale(0.75);
-  opacity: 0;
+  opacity: 1;
 }
 
 .game_logo_container-csgo{
@@ -281,7 +286,7 @@ button[role=see_more]:hover{
   width: 25%;
   height: 100%;
   margin-inline: auto;
-  opacity: 0;
+  opacity: 1;
   transform: scale(1.1);
   filter: invert(100%);
 }
