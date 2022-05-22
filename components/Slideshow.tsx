@@ -30,8 +30,7 @@ function Slideshow() {
             {fadeImages.map((each,index)=>(  
                 <div className="image_container" key={index} >
                     <Image src={each.url} alt='' layout='intrinsic' objectFit='cover' width={1920} height={1080} priority/>  
-                </div>                               
-                                                 
+                </div>                            
             ))}
         </Fade>
     </div>

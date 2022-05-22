@@ -4,7 +4,9 @@ import Styles from '../styles/Navbar.module.css'
 import { useState } from 'react'
 import { useRouter} from 'next/router'
 import { AiOutlineSearch } from "react-icons/ai";
+import { FaTwitterSquare, FaLinkedin, FaInstagram, FaFacebookSquare, FaYoutube, FaTwitch, FaDiscord } from 'react-icons/fa'
 import Logo from '../public/img/lucent_logo.webp'
+
 
 function Navbar() {
     const [open,setOpen] = useState(false);    
@@ -34,22 +36,22 @@ function Navbar() {
         <nav className={open ? Styles.mobile_menu_open: Styles.mobile_menu}>
             <ul className={Styles.mobile_nav_menu}>
                 <Link href='/'>
-                   <li><a>Home</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>Home</a></li> 
                 </Link>
                 <Link href='/news'>
-                   <li><a>News</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>News</a></li> 
                 </Link>
                 <Link href='/teams'>
-                   <li><a>Teams</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>Teams</a></li> 
                 </Link>
                 <Link href='#'>
-                   <li><a>Fixtures</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>Fixtures</a></li> 
                 </Link>
                 <Link href='#'>
-                   <li><a>Shop</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>Shop</a></li> 
                 </Link>
                 <Link href='#'>
-                   <li><a>About</a></li> 
+                   <li><a onClick={() => setOpen(!open)}>About</a></li> 
                 </Link>                            
             </ul>
         </nav>                    

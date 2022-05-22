@@ -141,6 +141,10 @@
 
 .mobile_menu li,.mobile_menu_open li{
     padding: 1rem;
+    cursor: pointer;
+    width: 30%;
+    margin-inline: auto;
+    list-style: none;
 }
 
 .mobile_menu{
