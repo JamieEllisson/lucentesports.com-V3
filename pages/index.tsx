@@ -95,7 +95,7 @@ function Home({ articles }:Props) {
           <div className='match_grid'>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='/img/flong.png' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='/img/flong.png' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='/img/flong.png' vsteamname='Domino esports' score='1-0' win= {true}/>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='/img/flong.png' vsteamname='Domino Esports' score='1-0' win= {true}/>
           </div>          
         </section>
         <section>

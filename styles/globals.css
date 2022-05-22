@@ -56,6 +56,7 @@ button{
   --ui-black: hsl(0 0% 5%);
   --ui-white: hsl(0 0% 100%);
   --ui-white-opacity40: hsl(0 0% 100% / 0.4);
+  --ui-white-opacity80: hsl(0 0% 100% / 0.8);
   --ui-grey-light: hsl(215, 10%, 45%);
   --ui-grey-light-opacity40: hsl(215 10% 45% / 0.4);
   --ui-grey-dark: rgb(34,38,47);
@@ -315,6 +316,24 @@ button[role=see_more]:hover{
   display: flex;
   flex-direction: column;
   align-items: center;  
+  padding-block-end: 1rem;
+}
+
+.match_details h4{
+  padding-block-start: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.match_details h6{
+  padding-block-start: 0.375rem;
+  font-size: 0.9rem;
+  color: var(--ui-grey-light);
+}
+
+.match_details h5{
+  padding-block-start: 0.375rem;
+  font-size: 0.8rem;
+  color: var(--ui-white);
 }
 
 .match_result{
@@ -332,6 +351,12 @@ button[role=see_more]:hover{
   width: 100px;  
 }
 
+.team_image_container{
+  width: 64px;
+  margin-inline: auto;
+  padding-block-end: 0.5rem;
+}
+
 .loss,.win{
   height: min-content;
   padding: 0.5rem 1rem;  
@@ -339,11 +364,11 @@ button[role=see_more]:hover{
 }
 
 .loss{  
-  background-color: red;  
+  background-color: #FF2849;  
 }
 
 .win{
-  background-color: green;
+  background-color: #12b34d;
 }
 
 .twitter_container{
