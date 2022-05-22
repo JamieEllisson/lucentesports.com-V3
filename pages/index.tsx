@@ -13,6 +13,7 @@ import FIFA from '../public/img/fifa.jpg'
 import GameLogo1 from '../public/img/leagueoflegends-logo.png'
 import GameLogo2 from '../public/img/csgo.png'
 import GameLogo3 from '../public/img/fifa.png'
+import Match from '../components/Match'
 
 function Home({ articles }:Props) {
 
@@ -40,7 +41,7 @@ function Home({ articles }:Props) {
           <div className='news_grid'>
             {articles.map(post =>(
               <Link key={post._id} href={`news/${post.slug.current}`}>
-                <div className='news_item'>
+                <article className='news_item'>
                   <div className='news_image_container'>
                     <Image src={urlFor(post.mainImage).url()!} alt="" layout='intrinsic' objectFit='cover' width={1920} height={1080} loading="lazy"/>
                   </div>                  
@@ -48,7 +49,7 @@ function Home({ articles }:Props) {
                     <div className='news_details_info'><h4>{post.categories[0].title}</h4><span className='dot'></span><h4 id='date'>{new Date(post._createdAt).toLocaleDateString("en-US",{month: 'long',day: 'numeric',year: 'numeric'})}</h4></div>
                     <h2>{post.title}</h2>
                   </div>
-                </div>
+                </article>
               </Link>
             ))}
           </div>
@@ -91,9 +92,17 @@ function Home({ articles }:Props) {
         </section>
         <section>
           <div className='section_heading_container'><div className='pill'></div><h3>Recent Matches</h3></div>
+          <div className='match_grid'>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='/img/flong.png' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='/img/flong.png' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='/img/flong.png' vsteamname='Domino esports' score='1-0' win= {true}/>
+          </div>          
         </section>
         <section>
           <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3></div>
+          <div className='twitter_container'>
+            <a className="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/Lucent_Esports?ref_src=twsrc%5Etfw">Tweets by Lucent_Esports</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+          </div>
         </section>
       </main>
     </>

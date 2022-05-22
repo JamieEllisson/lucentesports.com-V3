@@ -81,6 +81,7 @@ body{
 main{
   min-height: 80vh;
   margin-inline: auto;
+  padding-block-end: 1rem;
 }
 
 .coming_soon{
@@ -146,7 +147,7 @@ main{
 
 .section_heading_container{
   display: flex;
-  padding: 1rem;  
+  padding: 1.5rem 1rem;    
 }
 
 .section_heading_container h3{
@@ -223,6 +224,7 @@ main{
 }
 
 button[role=see_more]{
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin: 1.5rem auto 0.5rem auto;  
@@ -251,10 +253,11 @@ button[role=see_more]:hover{
 .team_container{
   width: 100%;
   height: 80px;
-  padding-inline: 1rem;
+  padding-inline: 1rem;  
 }
 
 .game_image_container{
+  cursor: pointer;
   position: relative;
   width: 100%;
   height: 100%; 
@@ -300,4 +303,49 @@ button[role=see_more]:hover{
 
 
 
+/* Index page match list */
 
+.match_container{
+  border-bottom: var(--ui-border);
+  border-top: var(--ui-border);
+  padding-block: 1rem;
+}
+
+.match_details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.match_result{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+.team1,.team2{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100px;  
+}
+
+.loss,.win{
+  height: min-content;
+  padding: 0.5rem 1rem;  
+  border-radius: 0.5rem;
+}
+
+.loss{  
+  background-color: red;  
+}
+
+.win{
+  background-color: green;
+}
+
+.twitter_container{
+  padding-inline: 1rem;
+}
