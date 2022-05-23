@@ -384,4 +384,104 @@ button[role=see_more]:hover{
 
 /* Teams Page */
 
+.teams_player_grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
+/* Playercard */
+
+.playercard_container{  
+  padding-inline: 1rem;
+}
+
+.playercard{
+  position: relative;
+  border: var(--ui-border);
+  padding: 1rem;
+}
+
+.playercard_image_container{
+  width: 100%;  
+}
+
+.playercard_info_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 1rem;
+}
+
+.playercard_info_container h4{
+  padding-inline-start: 0.25rem;  
+}
+
+.playercard_flag_name{
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.playercard_info_container span{
+  font-size: 1rem;
+  color: var(--ui-grey-light);
+  padding-block-start: 0.5rem;
+}
+
+.playercard_social_container{
+  display: flex;
+  justify-content: center;
+}
+
+.playercard_social_container svg{
+  font-size: 1.4rem;
+  margin-inline: 0.75rem;
+  margin-block-start: 0.6rem;
+}
+
+.playercard_social_container a{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--font-clr-light);  
+}
+
+.has_social{
+  display: block;
+}
+
+.no_social{
+  display: none;
+}
+
+.playercard_role_image{
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.playercard_role_container{
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+button[role=view_profile]{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0.5rem auto;  
+  font-family: 'gotham';
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  width: 100%;
+  padding: 0.5rem 4rem;  
+  color: var(--ui-grey-light);
+  border: solid 1px var(--ui-grey-light);
+  border-radius: 100vw;
+}
+
+button[role=view_profile]:hover{
+  color: var(--font-clr-light);
+  border-color: var(--font-clr-light);
+}
