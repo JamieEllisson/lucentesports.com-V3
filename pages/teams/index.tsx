@@ -24,6 +24,18 @@ function Teams() {
             <Playercard ign='Jamie' name='Jamie Ellisson' image='' role={Sup} country='US' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
           </div>
         </section>
+        <section>
+        <div className='section_heading_container'><div className='pill'></div><h3>Counter Strike Global Offensive</h3></div>
+          <div className='teams_player_grid'>
+            
+          </div>
+        </section>
+        <section>
+        <div className='section_heading_container'><div className='pill'></div><h3>Fifa</h3></div>
+          <div className='teams_player_grid'>
+            
+          </div>
+        </section>
     </main>
   )
 }

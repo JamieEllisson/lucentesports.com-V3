@@ -1,8 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import LucentLogo from '../public/img/Logo_Red.png'
+import placeholder from '../public/img/profile-placeholder.jpg'
 
 function Match(props: any) {     
+    var hasEnemyLogo = true
+    if (props.vsteamlogo == ''){
+        hasEnemyLogo = false
+    }
   return (
     <div className='match_container'>
         <div className='match_details'>
@@ -14,7 +19,7 @@ function Match(props: any) {
         <div className='match_result'>
             <div className='team1'>
                 <div className='team_image_container'>
-                    <Image src={LucentLogo} alt='Lucent' layout='intrinsic' width={498} height={357}/>
+                    <Image src={LucentLogo} alt='Lucent' layout='fill' objectFit='contain' loading='lazy'/>
                 </div>                
                 <h4>Lucent Esports</h4>
             </div>
@@ -22,7 +27,9 @@ function Match(props: any) {
                 <h1>{props.score}</h1>
             </div>
             <div className='team2'>
-                <Image src={props.vsteamlogo} alt='Enemy' layout='intrinsic' width={50} height={52}/>
+                <div className='team_image_container'>
+                    <Image src={hasEnemyLogo ? props.vsteamlogo : placeholder} alt='Enemy' layout='fill' objectFit='contain' loading='lazy'/>
+                </div>
                 <h4>{props.vsteamname}</h4>
             </div>
         </div>

@@ -160,14 +160,14 @@ main{
 .section_heading_container h3{
   font-family: 'gotham-light';
   text-transform: uppercase;
-  font-size: 0.875rem;
-  line-height: 1.25rem;  
+  font-size: 1rem;
+  line-height: 1.55rem;  
 }
 
 .pill{
   content: '';
   height: inherit;
-  width: 0.1875rem;
+  width: 0.25rem;
   border-radius: 100vw;  
   background-color: var(--ui-accent);
   color: var(--ui-accent);
@@ -216,9 +216,9 @@ main{
 .news_details h2{
   text-transform: uppercase;
   font-family: 'gotham';
-  font-size: 14px;
-  line-height: 20px;
-  padding-block-start: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  padding-block-start: 0.25rem;
 }
 
 .dot{
@@ -237,8 +237,8 @@ button[role=see_more]{
   margin: 1.5rem auto 0.5rem auto;  
   font-family: 'gotham';
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
   width: fit-content;
   padding: 0.5rem 4rem;  
   color: var(--ui-grey-light);
@@ -350,6 +350,10 @@ button[role=see_more]:hover{
   margin-inline: auto;
 }
 
+.match_result h4{
+  padding-block-start: 0.5rem;
+}
+
 .team1,.team2{
   display: flex;
   flex-direction: column;
@@ -358,9 +362,10 @@ button[role=see_more]:hover{
 }
 
 .team_image_container{
+  position: relative;  
   width: 64px;
-  margin-inline: auto;
-  padding-block-end: 0.5rem;
+  height: 64px;
+  margin-inline: auto;  
 }
 
 .loss,.win{
