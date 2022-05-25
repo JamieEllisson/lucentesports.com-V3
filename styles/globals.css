@@ -128,14 +128,15 @@ a.anchor {
 .socials{
   background-color: var(--ui-grey-dark);
   transform: translateY(-4px);
-  height: max-content;
+  height: max-content;  
 }
 
 .socials_list{
   display: flex;
   justify-content: space-between;  
-  max-width: 96rem;
+  max-width: 75rem;
   padding-inline: 1rem;
+  margin-inline: auto;
 }
 
 .socials_list a{
@@ -155,13 +156,13 @@ a.anchor {
 }
 
 .latest_news{
-  max-width: 96rem;  
+  max-width: 75rem;  
   margin-inline: auto;
 }
 
 .section_heading_container{
   display: flex;
-  padding: 1.5rem 1rem;    
+  padding: 1.5rem 1rem;  
 }
 
 .section_heading_container h3{
@@ -258,6 +259,11 @@ button[role=see_more]:hover{
   border-color: var(--font-clr-light);
 }
 
+.our_teams{
+  max-width: 75rem;  
+  margin-inline: auto;
+}
+
 .teams_grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -318,6 +324,11 @@ button[role=see_more]:hover{
 
 
 /* Index page match list */
+
+.recent_matches{
+  max-width: 75rem;  
+  margin-inline: auto;
+}
 
 .match_container{
   border-bottom: var(--ui-border);
@@ -388,6 +399,12 @@ button[role=see_more]:hover{
 
 .win{
   background-color: #12b34d;
+}
+
+
+.social_feed{
+  max-width: 75rem;  
+  margin-inline: auto;
 }
 
 .twitter_container{

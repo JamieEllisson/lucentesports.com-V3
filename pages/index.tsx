@@ -55,7 +55,7 @@ function Home({ articles }:Props) {
           </div>
           <button role='see_more' onClick={() => router.push('/news')}>See All News</button>
         </section>
-        <section>
+        <section className='our_teams'>
           <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3></div>
           <div className='teams_grid'>
             <Link href='/teams/#leagueoflegends' scroll={false}>
@@ -90,7 +90,7 @@ function Home({ articles }:Props) {
             </Link>                                           
           </div>          
         </section>
-        <section>
+        <section className='recent_matches'>
           <div className='section_heading_container'><div className='pill'></div><h3>Recent Matches</h3></div>
           <div className='match_grid'>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
@@ -98,7 +98,7 @@ function Home({ articles }:Props) {
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='' vsteamname='Domino Esports' score='1-0' win= {true}/>
           </div>          
         </section>
-        <section>
+        <section className='social_feed'>
           <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3></div>
           <div className='twitter_container'>
             <a className="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/Lucent_Esports?ref_src=twsrc%5Etfw">Tweets by Lucent_Esports</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>

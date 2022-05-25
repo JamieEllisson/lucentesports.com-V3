@@ -45,7 +45,12 @@ function Navbar() {
                 <h4>Search</h4>
             </div>
             <ul className={Styles.nav_menu}>
-                
+               <Link href='/'><li className={Styles.item}><div className={router.pathname == '/home' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>Home</a></div></li></Link>
+               <Link href='/news'><li className={Styles.item}><div className={router.pathname == '/news' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>News</a></div></li></Link>
+               <Link href='/teams'><li className={Styles.item}><div className={router.pathname == '/teams' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>Teams</a></div></li></Link>
+               <Link href='/fixtures'><li className={Styles.item}><div className={router.pathname == '/fixtures' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>Fixtures</a></div></li></Link>
+               <Link href='/shop'><li className={Styles.item}><div className={router.pathname == '/shop' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>Shop</a></div></li></Link>
+               <Link href='/about'><li className={Styles.item}><div className={router.pathname == '/about' ? Styles.link_current : Styles.link_style}><a className={Styles.link}>About</a></div></li></Link> 
             </ul>            
             <div className={Styles.hamburger_container}>
                 <h4>Menu</h4>
