@@ -191,19 +191,18 @@ a.anchor {
   display: flex;
   padding: 1rem;
   font-family: 'gotham-light';
-  border-bottom: var(--ui-border);
+  border-bottom: var(--ui-border);  
+  min-height: 125px;
+  max-height: 150px;    
 }
 
 .news_item:nth-child(1){  
   border-top: var(--ui-border);
 }
 
-.news_image_container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40%;
-  width: 40%;
+.news_image_container{  
+  position: relative;  
+  min-width: 40%;  
 }
 
 .news_details{
@@ -414,16 +413,23 @@ button[role=see_more]:hover{
 
 /* Teams Page */
 
+.team_section_container{
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
 .teams_player_grid{
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px,100%),1fr));
+  gap: 1rem 0rem;
 }
 
 .teams_heading_container{
   text-align: center;
   padding-inline: 1rem;
   padding-block-start: 1rem;
+  max-width: 75rem;
+  margin-inline: auto;
 }
 
 .teams_heading_container h1{
@@ -528,7 +534,7 @@ button[role=view_profile]{
   font-size: 12px;
   line-height: 16px;
   width: 100%;
-  padding: 0.5rem 4rem;  
+  padding: 0.5rem 0rem;  
   color: var(--ui-grey-light);
   border: solid 1px var(--ui-grey-light);
   border-radius: 100vw;
@@ -537,4 +543,49 @@ button[role=view_profile]{
 button[role=view_profile]:hover{
   color: var(--font-clr-light);
   border-color: var(--font-clr-light);
+}
+
+@media screen and (min-width:40rem) {
+  .news_grid{
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+
+  .news_item{
+    border: var(--ui-border);
+    padding: 0;  
+      
+  }
+
+  .news_image_container{
+    min-width: 32%;
+  }
+
+  .news_details{
+    padding-block-start: 0.5rem;
+  }
+}
+
+
+@media screen and (min-width:48rem) {
+  
+  .news_grid{
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+
+  .news_item{
+    border: var(--ui-border);
+    padding: 0;
+    
+  }
+
+}
+
+@media screen and (min-width:56rem) {
+  
+
+  .news_grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }

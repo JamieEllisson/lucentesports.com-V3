@@ -22,7 +22,7 @@ function Teams() {
           <h1>Our Teams</h1>
           <p>We field rosters across multiple esports titles with the aim to win championships. We have already become fan favourites and want to continue providing a breathe of fresh air to the esports scene!<br/><br/><b>Check out our active rosters below</b></p>
         </section>
-        <section className='league_team'>
+        <section className='team_section_container'>
           <a className='anchor' id='leagueoflegends'></a>
           <div className='section_heading_container'><div className='pill'></div><h3>League of Legends</h3></div>
           <div className='teams_player_grid'>
@@ -34,7 +34,7 @@ function Teams() {
             <Playercard ign='Jamie' name='Jamie Ellisson' image='' role={Staff} country='BR' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
           </div>
         </section>
-        <section>
+        <section className='team_section_container'>
         <a className='anchor' id='csgo'></a>
         <div className='section_heading_container'><div className='pill'></div><h3>CSGO</h3></div>
           <div className='teams_player_grid'>
@@ -46,12 +46,15 @@ function Teams() {
             <Playercard ign='?' name='?' image='' role={Staff} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
           </div>
         </section>
-        <section>
+        <section className='team_section_container'>
         <a className='anchor' id='fifa'></a>
         <div className='section_heading_container'><div className='pill'></div><h3>Fifa</h3></div>
           <div className='teams_player_grid'>
             <Playercard ign='?' name='?' image='' role={Staff} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
             <Playercard ign='?' name='?' image='' role={Staff} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </section>
     </main>

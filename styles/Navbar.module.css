@@ -327,5 +327,13 @@
 
     .nav_menu{
         display: inline-flex;
+        
+    }
+}
+
+@media screen and (min-width:76rem) {
+    .nav_menu{
+        
+        padding-inline: 1rem;
     }
 }

@@ -43,7 +43,7 @@ function Home({ articles }:Props) {
               <Link key={post._id} href={`news/${post.slug.current}`}>
                 <article className='news_item'>
                   <div className='news_image_container'>
-                    <Image src={urlFor(post.mainImage).url()!} alt="" layout='intrinsic' objectFit='cover' width={1920} height={1080} loading="lazy"/>
+                    <Image src={urlFor(post.mainImage).url()!} alt="" layout='fill' objectFit='cover' loading="lazy"/>
                   </div>                  
                   <div className='news_details'>
                     <div className='news_details_info'><h4>{post.categories[0].title}</h4><span className='dot'></span><h4 id='date'>{new Date(post._createdAt).toLocaleDateString("en-US",{month: 'long',day: 'numeric',year: 'numeric'})}</h4></div>
