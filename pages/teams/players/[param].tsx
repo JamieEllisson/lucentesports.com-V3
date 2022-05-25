@@ -1,6 +1,6 @@
 import React from 'react'
 
-function csgo() {
+function Players() {
   return (
     <main className='coming_soon'>
         <h1>Coming Soon</h1>
@@ -8,4 +8,4 @@ function csgo() {
   )
 }
 
-export default csgo
+export default Players

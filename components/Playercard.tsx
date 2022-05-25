@@ -3,6 +3,8 @@ import Image from 'next/image'
 import ReactCountryFlag from "react-country-flag"
 import placeholder from '../public/img/profile-placeholder.jpg'
 import { FaTwitter, FaYoutube, FaTwitch } from 'react-icons/fa'
+import router from 'next/router'
+import Link from 'next/link'
 
 function Playercard(props: any) {
   var hasTwitter = true
@@ -47,7 +49,10 @@ function Playercard(props: any) {
           <a href={props.youtube}><FaYoutube/></a>
           </div>                  
         </div>
-        <button role='view_profile'>View Profile</button>        
+        <Link href={`/teams/players/${props.ign}`}>
+          <a><button role='view_profile'>View Profile</button></a> 
+        </Link>
+              
       </div>       
     </div>
   )

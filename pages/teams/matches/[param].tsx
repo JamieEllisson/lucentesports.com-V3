@@ -1,6 +1,6 @@
 import React from 'react'
 
-function leagueoflegends() {
+function Matches() {
   return (
     <main className='coming_soon'>
         <h1>Coming Soon</h1>
@@ -8,4 +8,4 @@ function leagueoflegends() {
   )
 }
 
-export default leagueoflegends
+export default Matches

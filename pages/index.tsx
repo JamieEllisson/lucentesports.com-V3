@@ -58,7 +58,7 @@ function Home({ articles }:Props) {
         <section>
           <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3></div>
           <div className='teams_grid'>
-            <Link href='/teams/leagueoflegends'>
+            <Link href='/teams/#leagueoflegends' scroll={false}>
               <div className='team_container'>
                 <div className='game_image_container'>
                   <Image id='leagueoflegends' className='game_image' src={LeagueOfLegends} alt='' layout='fill' objectFit='cover' loading='lazy'/>
@@ -68,7 +68,7 @@ function Home({ articles }:Props) {
                 </div>              
               </div>
             </Link>
-            <Link href='/teams/csgo'>
+            <Link href='/teams/#csgo' scroll={false}>
               <div className='team_container'>
                 <div className='game_image_container'>
                   <Image id='csgo' className='game_image' src={CSGO} alt='' layout='fill' objectFit='cover' objectPosition='top' loading='lazy'/>
@@ -78,7 +78,7 @@ function Home({ articles }:Props) {
                 </div>              
               </div>
             </Link>
-            <Link href='/teams/fifa'>
+            <Link href='/teams/#fifa' scroll={false}>
               <div className='team_container'>
                 <div className='game_image_container'>
                   <Image id='csgo' className='game_image' src={FIFA} alt='' layout='fill' objectFit='cover' loading='lazy'/>
