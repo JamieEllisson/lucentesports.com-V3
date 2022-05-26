@@ -161,6 +161,7 @@ a.anchor {
 }
 
 .section_heading_container{
+  position: relative;
   display: flex;
   padding: 1.5rem 1rem;  
 }
@@ -192,8 +193,7 @@ a.anchor {
   padding: 1rem;
   font-family: 'gotham-light';
   border-bottom: var(--ui-border);  
-  min-height: 125px;
-  max-height: 150px;    
+  min-height: 125px;   
 }
 
 .news_item:nth-child(1){  
@@ -206,7 +206,7 @@ a.anchor {
 }
 
 .news_details{
-  padding-inline-start: 0.5rem;
+  padding-inline-start: 0.5rem;  
 }
 
 .news_details_info #date,.news_details_info .dot{
@@ -246,8 +246,8 @@ button[role=see_more]{
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
-  width: fit-content;
-  padding: 0.5rem 4rem;  
+  width: 40%;
+  padding: 0.5rem 0rem;  
   color: var(--ui-grey-light);
   border: solid 1px var(--ui-grey-light);
   border-radius: 100vw;
@@ -512,16 +512,17 @@ button[role=see_more]:hover{
   display: none;
 }
 
-.playercard_role_image{
-  position: relative;
-  width: 40px;
-  height: 40px;
+.playercard_role_image{ 
+  width: 100%;
+  height: 100%;
 }
 
 .playercard_role_container{
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
+  width: 14%;
+  aspect-ratio: 1/1;
 }
 
 button[role=view_profile]{
@@ -546,46 +547,67 @@ button[role=view_profile]:hover{
 }
 
 @media screen and (min-width:40rem) {
+
+  [class*='teams-bar']{
+    content: "";
+    position: absolute;
+    height: 1px;    
+    right: 0;
+    top: 50%;
+    border-radius: 100vw;
+    background-color: var(--ui-white);
+    margin-inline-end: 1rem;
+  }
+
+  .teams-bar-lol{
+    width: calc(100% - 286px);
+  }
+
+  .teams-bar-csgo{
+    width: calc(100% - 120px);
+  }
+
+  .teams-bar-fifa{
+    width: calc(100% - 106px);
+  }
+
   .news_grid{
-    padding-inline: 1rem;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr)); 
+    gap: 1rem 0.5rem;   
   }
 
   .news_item{
-    border: var(--ui-border);
-    padding: 0;  
-      
-  }
-
-  .news_image_container{
-    min-width: 32%;
+    flex-direction: column;
+    padding: 0 1rem;
+    border: none;
   }
 
   .news_details{
-    padding-block-start: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .news_item:nth-child(1){
+    border: none;
+  }  
+
+  .news_image_container{
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+
+  .news_details_info #date,.news_details_info .dot{
+    display: block;
+  }
+
+  .news_details_info{
+    display: flex;
+    align-items: center;
   }
 }
 
-
-@media screen and (min-width:48rem) {
-  
-  .news_grid{
-    padding-inline: 1rem;
-    gap: 1rem;
-  }
-
-  .news_item{
-    border: var(--ui-border);
-    padding: 0;
-    
-  }
+@media screen and (min-width:48rem) { 
 
 }
 
-@media screen and (min-width:56rem) {
-  
+@media screen and (min-width:56rem) {   
 
-  .news_grid{
-    grid-template-columns: 1fr 1fr;
-  }
 }

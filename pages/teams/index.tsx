@@ -24,7 +24,7 @@ function Teams() {
         </section>
         <section className='team_section_container'>
           <a className='anchor' id='leagueoflegends'></a>
-          <div className='section_heading_container'><div className='pill'></div><h3>League of Legends</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>League of Legends</h3><span className='teams-bar-lol'></span></div>
           <div className='teams_player_grid'>
             <Playercard ign='Jamie' name='Jamie Ellisson' image='' role={Top} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
             <Playercard ign='Jamie' name='Jamie Ellisson' image='' role={Jgl} country='FR' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
@@ -36,7 +36,7 @@ function Teams() {
         </section>
         <section className='team_section_container'>
         <a className='anchor' id='csgo'></a>
-        <div className='section_heading_container'><div className='pill'></div><h3>CSGO</h3></div>
+        <div className='section_heading_container'><div className='pill'></div><h3>CSGO</h3><span className='teams-bar-csgo'></span></div>
           <div className='teams_player_grid'>
             <Playercard ign='?' name='?' image='' role={CSGO} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
             <Playercard ign='?' name='?' image='' role={CSGO} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
@@ -48,7 +48,7 @@ function Teams() {
         </section>
         <section className='team_section_container'>
         <a className='anchor' id='fifa'></a>
-        <div className='section_heading_container'><div className='pill'></div><h3>Fifa</h3></div>
+        <div className='section_heading_container'><div className='pill'></div><h3>Fifa</h3><span className='teams-bar-fifa'></span></div>
           <div className='teams_player_grid'>
             <Playercard ign='?' name='?' image='' role={Staff} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
             <Playercard ign='?' name='?' image='' role={Staff} country='GB' twitter='https://twitter.com/Lucent_Esports' twitch='#' youtube='#'/>
