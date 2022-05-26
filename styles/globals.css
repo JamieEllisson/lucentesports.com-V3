@@ -1,6 +1,7 @@
 /* Imports and Fonts */
 
 @import "react-slideshow-image/dist/styles.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,400;100,300;100,350;100,400;100,500;100,600;100,700;100,800&display=swap');
 
 @font-face {
   font-family: 'gotham';
@@ -544,6 +545,131 @@ button[role=view_profile]{
 button[role=view_profile]:hover{
   color: var(--font-clr-light);
   border-color: var(--font-clr-light);
+}
+
+
+/* About Page */
+
+.about_lucent, .about_partners, .about_staff,.about_achievements{
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.about_lucent_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding-block-start: 1rem;
+}
+
+.lucent_heading{
+  text-align: center;
+}
+
+.about_lucent_container h1{
+  text-transform: uppercase;
+  font-family: 'gotham';
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.about_lucent_content_container{
+  max-width: 50rem;
+  text-align: center;
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.about_lucent_content_container p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.about_lucent_content_container p:first-child{
+  padding-block-end: 1rem;
+}
+
+.down_arrow{
+  color: var(--ui-accent);
+  font-size: 5rem;
+}
+
+.about_staff_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr));
+  gap: 1.5rem 0;
+}
+
+/* Staffcard */
+
+.staffcard_container{
+  padding-inline: 1rem;
+  margin-inline: auto;
+  color: var(--font-clr-dark);
+  height: 100%;
+}
+
+.staffcard{
+  position: relative;
+  max-width: 456px;
+  width: 100%;
+  height: 100%;
+  border: var(--ui-border);
+  background-color: #eeeeee;
+}
+
+.staffcard_image_container{
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.staffcard_info_container,.staffcard_image_container{
+  background-color: #eeeeee;
+}
+
+.staffcard_info_container{  
+  padding: 1rem 1rem 4rem 1rem;
+  
+}
+
+.staffcard_info_container h3{
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.staffcard_info_container h4{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-stretch: 75%;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #E5213A;
+  padding-block-end: 0.75rem;
+}
+
+.staffcard_info_container p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0;  
+}
+
+.staffcard_info_socials_container{
+  position: absolute;
+  bottom: 0.75rem;
+  left: 1rem;
+  display: flex;  
+}
+
+.staffcard_info_socials_container h6{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-inline-end: 0.5rem;  
+}
+
+.staffcard_info_socials_container h6 a{
+  color: var(--font-clr-dark);  
 }
 
 @media screen and (min-width:40rem) {
