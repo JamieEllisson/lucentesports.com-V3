@@ -436,8 +436,8 @@ button[role=see_more]:hover{
 .teams_heading_container h1{
   text-transform: uppercase;
   font-family: 'gotham';
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .teams_heading_container p{  
@@ -574,7 +574,7 @@ button[role=view_profile]:hover{
 }
 
 .about_lucent_content_container{
-  max-width: 50rem;
+  max-width: 56rem;
   text-align: center;
   padding: 1rem;
   margin-inline: auto;
@@ -597,7 +597,7 @@ button[role=view_profile]:hover{
 
 .about_staff_grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(302px,100%),1fr));
   gap: 1.5rem 0;
 }
 
@@ -727,6 +727,19 @@ button[role=view_profile]:hover{
   .news_details_info{
     display: flex;
     align-items: center;
+  } 
+
+  .lucent_heading{
+    display: flex;    
+  }
+
+  .lucent_heading h1{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lucent_heading h1:nth-child(2){
+    padding-inline: 0.5rem;
   }
 }
 
