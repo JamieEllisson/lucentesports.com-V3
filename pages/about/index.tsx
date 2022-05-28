@@ -18,10 +18,10 @@ function about() {
           </div>
         </section>
         <section className='about_partners'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Our Partners</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Our Partners</h3><span className='about-bar-partners'></span></div>
         </section>
         <section className='about_staff'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Our Staff</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Our Staff</h3><span className='about-bar-staff'></span></div>
           <div className='about_staff_grid'>
             <Staffcard image='/img/staff/will.webp' role='CEO &#38; Co-Founder' name='William Gleadall' bio1='As one of the Founding bodies behind Lucent, William has been at the forefront of Lucent&#39;s direction over the past 3 years.' bio2='William has a strong background in Social Media, Marketing, and Management.' twitter='' linkedin=''/>
             <Staffcard image='/img/staff/ellis.webp' role='Director &#38; Business Development' name='Ellis Ratchford' bio1='A driving force behind the Lucent relaunch in 2020. Ellis currently operates Lucent&#39;s Business Development and growth' bio2='Ellis has a strong background in Management, Sales, and Pitching.' twitter='' linkedin=''/>
@@ -34,7 +34,7 @@ function about() {
           </div>
         </section>
         <section className='about_achievements'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Our Achievements</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Our Achievements</h3><span className='about-bar-achievements'></span></div>
         </section>
       </main>  
     </>

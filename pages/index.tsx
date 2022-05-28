@@ -16,7 +16,7 @@ import GameLogo3 from '../public/img/fifa.png'
 import Match from '../components/Match'
 
 function Home({ articles }:Props) {
-
+  const latest_news = articles.slice(0,3)
   return (
     <>
       <Head>
@@ -24,7 +24,15 @@ function Home({ articles }:Props) {
       </Head>
 
       <main>
-        <Slideshow/>
+        <div className='slideshow_container'>
+          <Slideshow/>
+          <div className='index_hero_text'>
+            <h6>We are</h6>
+            <h1>Lucent</h1>
+            <h1>Esports</h1>
+            <h6>Be the Light</h6>
+          </div>
+        </div>                
         <section className='socials'>
           <ul className='socials_list'>
             <a href='https://twitter.com/Lucent_Esports'><FaTwitterSquare/></a>
@@ -39,11 +47,11 @@ function Home({ articles }:Props) {
         <section className='latest_news'>
           <div className='section_heading_container'><div className='pill'></div><h3>Latest News</h3></div>
           <div className='news_grid'>
-            {articles.map(post =>(
+            {latest_news.map(post =>(
               <Link key={post._id} href={`news/${post.slug.current}`}>
                 <article className='news_item'>
                   <div className='news_image_container'>
-                    <Image src={urlFor(post.mainImage).url()!} alt="" layout='fill' objectFit='cover' loading="lazy"/>
+                    <Image className='news_image' src={urlFor(post.mainImage).url()!} alt="" layout='fill' objectFit='cover' loading="lazy"/>
                   </div>                  
                   <div className='news_details'>
                     <div className='news_details_info'><h4>{post.categories[0].title}</h4><span className='dot'></span><h4 id='date'>{new Date(post._createdAt).toLocaleDateString("en-US",{month: 'long',day: 'numeric',year: 'numeric'})}</h4></div>

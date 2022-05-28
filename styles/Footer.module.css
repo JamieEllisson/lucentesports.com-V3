@@ -45,3 +45,17 @@
     padding-block: 0.5rem;
     text-align: center;
 }
+
+@media screen and (min-width:56rem) {
+    
+
+    .nav_container{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .nav{
+        padding-inline: 1rem;
+    }
+}

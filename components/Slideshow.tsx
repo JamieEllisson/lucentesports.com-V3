@@ -12,6 +12,14 @@ const fadeImages = [
         url: '/img/large-slideshow-2.jpg',
         caption: 'Second Slide'
     },   
+    {
+        url: '/img/space.jpg',
+        caption: 'Third Slide'
+    },
+    {
+        url: '/img/sunset.jpg',
+        caption: 'Fourth Slide'
+    },
 ];
 
 const properties = {

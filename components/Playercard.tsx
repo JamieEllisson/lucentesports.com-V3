@@ -5,6 +5,7 @@ import placeholder from '../public/img/profile-placeholder.jpg'
 import { FaTwitter, FaYoutube, FaTwitch } from 'react-icons/fa'
 import router from 'next/router'
 import Link from 'next/link'
+import styles from '../styles/Playercard.module.css'
 
 function Playercard(props: any) {
   var hasTwitter = true
@@ -24,36 +25,33 @@ function Playercard(props: any) {
     hasImage = false;
   }
   return (
-    <div className='playercard_container'>
-      <div className='playercard'>
-        <div className='playercard_image_container'>
+    <div className={styles.container}>      
+        <div className={styles.image_container}>
           <Image src={hasImage ? props.image : placeholder} alt='player pic' layout='intrinsic' width={600} height={600}/>
         </div>
-        <div className='playercard_role_container'>
-          <div className='playercard_role_image'>
+        <div className={styles.role_container}>
+          <div className={styles.role_image}>
             <Image src={props.role} alt='' layout='fill' objectFit='contain'/>
           </div>          
         </div>
-        <div className='playercard_info_container'>
-          <div className='playercard_flag_name'><ReactCountryFlag className='country_flag' countryCode={props.country} svg/><h4>{props.ign}</h4></div>
+        <div className={styles.info_container}>
+          <div className={styles.flag_and_ign}><ReactCountryFlag className='country_flag' countryCode={props.country} svg/><h4>{props.ign}</h4></div>
           <span>{props.name}</span>
         </div>
-        <div className='playercard_social_container'>
-          <div className={hasTwitter ? 'has_social' : 'no_social'}>
+        <div className={styles.social_container}>
+          <div className={hasTwitter ? styles.has_social : styles.no_social}>
             <a href={props.twitter}><FaTwitter/></a>
           </div>   
-          <div className={hasTwitch ? 'has_social' : 'no_social'}>
+          <div className={hasTwitch ? styles.has_social : styles.no_social}>
           <a href={props.twitch}><FaTwitch/></a>
           </div>  
-          <div className={hasYoutube ? 'has_social' : 'no_social'}>
+          <div className={hasYoutube ? styles.has_social : styles.no_social}>
           <a href={props.youtube}><FaYoutube/></a>
           </div>                  
         </div>
         <Link href={`/teams/players/${props.ign}`}>
           <a><button role='view_profile'>View Profile</button></a> 
-        </Link>
-              
-      </div>       
+        </Link>                       
     </div>
   )
 }
