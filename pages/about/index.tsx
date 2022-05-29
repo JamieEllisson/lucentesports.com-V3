@@ -54,6 +54,37 @@ function about() {
             </div>
           </div>
         </section>
+        <section id='contact-us' className='about_contact'>
+          <div className='section_heading_container'><div className='pill'></div><h3>Contact Us</h3><span className='about-bar-contact'></span></div>
+          <div className='contact_content_container'>
+            <div className='contact_left_container'>
+              <div className='contact_image_container'>
+                <Image src='/img/contact_image.webp' alt='' layout='fill' objectFit='cover' loading='lazy'/>
+              </div>              
+            </div>          
+            <div className='form_container'>
+              <form name='contact' method='POST' data-netlify='true'>
+                <label className='form_item'>
+                  <span>Name:</span>
+                  <input type='text' name='name' placeholder='Name' required></input>
+                </label>                                 
+                <label className='form_item'>
+                  <span>Email:</span>
+                  <input type='text' name='email' placeholder='Email' required></input>
+                </label>            
+                <label className='form_item'>
+                  <span>Subject:</span>
+                  <input type='text' name='subject' placeholder='Subject' required></input>
+                </label>            
+                <label className='form_item'>
+                  <span>Message:</span>
+                  <textarea name='message' placeholder='Message' required></textarea>
+                </label>            
+                <button className='form_submit' type='submit'>Send Message</button>
+              </form>  
+            </div>
+          </div>          
+        </section>
       </main>  
     </>
   )    

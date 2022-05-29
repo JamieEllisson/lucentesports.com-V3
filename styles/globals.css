@@ -374,12 +374,6 @@ button[role=see_more]:hover{
   transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-
-
-
-
-/* Index page match list */
-
 .recent_matches{
   max-width: 75rem;  
   margin-inline: auto;
@@ -395,7 +389,6 @@ button[role=see_more]:hover{
   padding-inline: 1rem;
   margin-inline: auto;
 }
-
 
 /* Teams Page */
 
@@ -460,7 +453,7 @@ button[role=view_profile]:hover{
 
 /* About Page */
 
-.about_lucent, .about_partners, .about_staff,.about_achievements{
+.about_lucent, .about_partners, .about_staff,.about_achievements,.about_contact{
   max-width: 75rem;
   margin-inline: auto;
 }
@@ -613,6 +606,75 @@ button[role=view_profile]:hover{
   position: relative;
 }
 
+
+
+.contact_content_container{
+  display: flex;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+.contact_left_container{  
+  display: none;  
+  width: 50%; 
+  padding-inline-end: 4rem; 
+}
+
+.contact_image_container{
+  
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.form_container{
+  width: 50%;
+}
+
+.form_item{
+  display: flex;
+  flex-direction: column;
+}
+
+.form_item span{
+  padding-block-end: 0.5rem;
+}
+
+.form_item input{
+  margin-block-end: 1rem;
+}
+
+.form_submit{
+  background-color: var(--bg-dark);
+  border: var(--ui-border);
+  border-radius: 100vw;
+  width: 100%;
+  color: white;
+  padding: 0.75rem 1rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+}
+
+
+input[type=text],textarea{
+  background-color: var(--bg-dark); 
+  border: var(--ui-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; 
+  color: white; 
+  font-size: 1.1rem;
+}
+
+textarea{
+  width: 100% !important;
+  height: 160px;
+  resize: none;
+}
+
+input[type=text]:focus,textarea:focus{
+  outline: solid 1px var(--ui-accent);
+}
+
 @media screen and (min-width:40rem) {
 
   .index_hero_text{
@@ -678,6 +740,10 @@ button[role=view_profile]:hover{
 
   .about-bar-achievements{
     width: calc(100% - 277px);
+  }
+
+  .about-bar-contact{
+    width: calc(100% - 195px);
   }
 
   .news_grid{
@@ -751,6 +817,10 @@ button[role=view_profile]:hover{
     font-size: 1.375rem; 
     line-height: 1.75rem;   
   }
+
+  
+
+
 }
 
 @media screen and (min-width:56rem) {   
@@ -776,6 +846,10 @@ button[role=view_profile]:hover{
   .achievements_image_container{
     display: block;   
     width: 45%;
+  }
+
+  .contact_left_container{
+    display: block;
   }
 
 }
