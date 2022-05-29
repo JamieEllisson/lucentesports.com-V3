@@ -1,13 +1,25 @@
 import Image from 'next/image'
 import Styles from '../styles/Footer.module.css'
 import Logo from '../public/img/lucent_logo.webp'
+import { FaTwitterSquare, FaLinkedin, FaInstagram, FaFacebookSquare, FaYoutube, FaTwitch, FaDiscord } from 'react-icons/fa'
 
 function Footer() {
   return (
     <footer className={Styles.container}>
       <div className={Styles.top_footer}>
-        <div className={Styles.logo_container}>
-          <Image src={Logo} alt='lucent logo' layout='intrinsic' width={273} height={88}/>
+        <div className={Styles.logo_and_socials}>
+          <div className={Styles.logo_container}>
+            <Image src={Logo} alt='lucent logo' layout='intrinsic' width={273} height={88}/>
+          </div>
+          <ul className={Styles.socials_list}>
+            <a href='https://twitter.com/Lucent_Esports'><FaTwitterSquare/></a>
+            <a href='https://www.linkedin.com/company/lucentesports/'><FaLinkedin/></a>
+            <a href='#'><FaFacebookSquare/></a>
+            <a href='https://www.instagram.com/lucentesports/'><FaInstagram/></a>
+            <a href='https://www.youtube.com/channel/UCzO-kkwhMXtv1oPzI7qoQgA'><FaYoutube/></a>
+            <a href='#'><FaTwitch/></a>
+            <a href='#'><FaDiscord/></a>
+          </ul>
         </div>
         <div className={Styles.nav_container}>
           <div className={Styles.nav}>

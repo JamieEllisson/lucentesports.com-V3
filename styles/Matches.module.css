@@ -70,25 +70,25 @@
     background-color: #12b34d;
 }
 
-@media screen and (min-width:64rem) {
+@media screen and (min-width:48rem) {
    .container{
        display: flex;
        padding-inline: 1rem;
    } 
 
    .info{
-       width: 30%;
+       width: 45%;
    }
 
    .result{
        justify-content: flex-end;
-       width: 65%;
+       width: 55%;
    }
 
    .loss,.win{
     height: min-content;
     padding: 0.5rem 1rem;  
     border-radius: 0.5rem;
-    margin-inline: 6rem;
+    margin-inline: 3rem;
   }
 }

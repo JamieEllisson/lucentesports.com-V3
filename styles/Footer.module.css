@@ -9,6 +9,24 @@
     max-height: 120px;    
 }
 
+.socials_list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.socials_list a{
+    display: flex;
+    align-items: center;    
+    color: var(--ui-grey-light);
+}
+
+.socials_list a svg{
+    height: 24px;
+    width: 24px;
+}
+
 .nav_container{
     display: flex;
     flex-direction: column;

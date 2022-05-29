@@ -63,6 +63,15 @@ function Home({ articles }:Props) {
           </div>
           <button role='see_more' onClick={() => router.push('/news')}>See All News</button>
         </section>
+        <section className='recent_matches'>
+          <div className='section_heading_container'><div className='pill'></div><h3>Recent Results</h3><span className='index-bar-matches'></span></div>
+          <div className='match_grid'>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
+            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='' vsteamname='Domino Esports' score='1-0' win= {true}/>
+          </div> 
+          <button role='see_more' onClick={() => router.push('/')}>See All Matches</button>         
+        </section>
         <section className='our_teams'>
           <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3><span className='index-bar-teams'></span></div>
           <div className='teams_grid'>
@@ -97,16 +106,7 @@ function Home({ articles }:Props) {
               </div> 
             </Link>                                           
           </div>          
-        </section>
-        <section className='recent_matches'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Recent Results</h3><span className='index-bar-matches'></span></div>
-          <div className='match_grid'>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='' vsteamname='Domino Esports' score='1-0' win= {true}/>
-          </div> 
-          <button role='see_more' onClick={() => router.push('/')}>See All Matches</button>         
-        </section>
+        </section>        
         <section className='social_feed'>
           <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3><span className='index-bar-socials'></span></div>
           <div className='twitter_container'>

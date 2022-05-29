@@ -126,7 +126,7 @@ a.anchor {
 
 .slideshow_container{
   position: relative;
-  background-color: var(--ui-grey-dark);
+  background-color: var(--ui-grey-dark-opacity40);
 }
 
 .slide_container{
@@ -179,8 +179,8 @@ a.anchor {
 }
 
 .socials{
-  background-color: var(--ui-grey-dark);
-  transform: translateY(-4px);
+  background-color: var(--ui-grey-dark-opacity40);
+  
   height: max-content;  
  
 }
@@ -255,8 +255,7 @@ a.anchor {
 }
 
 .news_image_container{  
-  position: relative;
-  border-radius: 0.5rem;  
+  position: relative; 
   min-width: 40%; 
   overflow: hidden; 
   
@@ -415,7 +414,7 @@ button[role=see_more]:hover{
 .teams_heading_container{
   text-align: center;
   padding-inline: 1rem;
-  padding-block-start: 1rem;
+  padding-block-start: 3rem;
   max-width: 75rem;
   margin-inline: auto;
 }
@@ -506,6 +505,7 @@ button[role=view_profile]:hover{
 .down_arrow{
   color: var(--ui-accent);
   font-size: 5rem;
+  font-weight: 900;
 }
 
 .about_staff_grid{
@@ -585,6 +585,34 @@ button[role=view_profile]:hover{
   color: var(--font-clr-dark);  
 }
 
+.achievements_content_container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-inline: 1.25rem;
+  padding-block-end: 1rem;
+}
+
+.achievements_content_container h5{
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.achievement_list{
+  list-style-type: disc;
+  list-style-position: inside; 
+  padding-block: 0.5rem; 
+}
+
+.achievement_list li{
+  padding-block: 0.75rem;
+}
+
+.achievements_image_container{
+  display: none;
+  position: relative;
+}
+
 @media screen and (min-width:40rem) {
 
   .index_hero_text{
@@ -661,6 +689,10 @@ button[role=view_profile]:hover{
   .news_item{
     flex-direction: column;
     padding: 0 ;
+    border: none;   
+  }
+
+  .news_item:nth-child(1){
     border: none;
   }
 
@@ -668,16 +700,13 @@ button[role=view_profile]:hover{
     display: none;
   }
 
-  .news_details{
+  .news_details{    
     padding: 0.5rem 0.5rem;
+    
   }    
 
-  .news_item:nth-child(1){
-    border: none;
-  }  
-
   .news_image_container{
-    aspect-ratio: 1/1;
+    aspect-ratio: 16/9;
     width: 100%;
   }
 
@@ -725,7 +754,12 @@ button[role=view_profile]:hover{
 }
 
 @media screen and (min-width:56rem) {   
- 
+
+  .socials_list a svg{
+    height: 32px;
+    width: 32px;
+  } 
+
 }
 
 
@@ -733,14 +767,15 @@ button[role=view_profile]:hover{
   
   .news_item:last-child{
     display: block;
-  }  
-
-  .socials{
-    transform: translateY(0);
+  }    
+ 
+  .achievements_content_container{
+    justify-content: space-between;
   }
 
-  .socials_list a svg{
-    height: 32px;
-    width: 32px;
+  .achievements_image_container{
+    display: block;   
+    width: 45%;
   }
+
 }
