@@ -63,7 +63,7 @@ function about() {
               </div>              
             </div>          
             <div className='form_container'>
-              <form name='contact' method='POST' data-netlify='true' action='/api/submit-form'>
+              <form name='contact' method='POST' data-netlify='true'>
                 <label className='form_item'>
                   <span>Name:</span>
                   <input type='text' name='name' placeholder='Name' required></input>
