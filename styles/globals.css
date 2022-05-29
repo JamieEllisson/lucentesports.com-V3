@@ -120,6 +120,10 @@ a.anchor {
   font-family: 'gotham';
 }
 
+.our_teams,.recent_matches,.social_feed{
+  padding-block-start: 1rem;
+}
+
 .slideshow_container{
   position: relative;
   background-color: var(--ui-grey-dark);
@@ -266,7 +270,7 @@ a.anchor {
   display: none;
 }
 
-.news_details h4{
+.news_details h4,.news_details time{
   text-transform: uppercase;
   font-size: 12px;
   line-height: 16px;
@@ -299,7 +303,7 @@ button[role=see_more]{
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
-  width: 40%;
+  width: calc(100% - 32px);
   padding: 0.5rem 0rem;  
   color: var(--ui-grey-light);
   border: solid 1px var(--ui-grey-light);
@@ -388,7 +392,9 @@ button[role=see_more]:hover{
 }
 
 .twitter_container{
+  max-width: 640px;
   padding-inline: 1rem;
+  margin-inline: auto;
 }
 
 
@@ -595,7 +601,7 @@ button[role=view_profile]:hover{
     line-height: 1.75rem;   
   }
 
-  [class*='teams-bar'],[class*='about-bar']{
+  [class*='teams-bar'],[class*='about-bar'],[class*='index-bar']{
     content: "";
     position: absolute;
     height: 1px;    
@@ -604,6 +610,22 @@ button[role=view_profile]:hover{
     border-radius: 100vw;
     background-color: var(--ui-white);
     margin-inline-end: 1rem;
+  }
+
+  .index-bar-latest{
+    width: calc(100% - 208px);
+  }
+
+  .index-bar-matches{
+    width: calc(100% - 242px);
+  }
+
+  .index-bar-teams{
+    width: calc(100% - 185px);
+  }
+
+  .index-bar-socials{
+    width: calc(100% - 200px);
   }
 
   .teams-bar-lol{

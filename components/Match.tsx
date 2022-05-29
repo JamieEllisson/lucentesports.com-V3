@@ -19,7 +19,7 @@ function Match(props: any) {
         <div className={styles.info}>
             <Image src={props.game} alt='' layout='intrinsic' width={32} height={32}/>
             <h4>{props.league}</h4>
-            <h6>{props.date}</h6>
+            <time dateTime={props.date}>{props.date}</time>
             <Link href={`/teams/matches/${matchID}`}>
                 <a><h5>See Match Details  &#8250;</h5></a>
             </Link>            

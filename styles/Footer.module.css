@@ -4,8 +4,9 @@
 
 .logo_container{
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     padding-block: 1rem;
+    max-height: 120px;    
 }
 
 .nav_container{
@@ -48,6 +49,10 @@
 
 @media screen and (min-width:56rem) {
     
+    .top_footer{
+        display: flex;
+        justify-content: center;
+    }
 
     .nav_container{
         flex-direction: row;

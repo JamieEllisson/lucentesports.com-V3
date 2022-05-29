@@ -45,7 +45,7 @@ function Home({ articles }:Props) {
           </ul>
         </section>
         <section className='latest_news'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Latest News</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Latest News</h3><span className='index-bar-latest'></span></div>
           <div className='news_grid'>
             {latest_news.map(post =>(
               <Link key={post._id} href={`news/${post.slug.current}`}>
@@ -54,7 +54,7 @@ function Home({ articles }:Props) {
                     <Image className='news_image' src={urlFor(post.mainImage).url()!} alt="" layout='fill' objectFit='cover' loading="lazy"/>
                   </div>                  
                   <div className='news_details'>
-                    <div className='news_details_info'><h4>{post.categories[0].title}</h4><span className='dot'></span><h4 id='date'>{new Date(post._createdAt).toLocaleDateString("en-US",{month: 'long',day: 'numeric',year: 'numeric'})}</h4></div>
+                    <div className='news_details_info'><h4>{post.categories[0].title}</h4><span className='dot'></span><time id='date' dateTime={post._createdAt}>{new Date(post._createdAt).toLocaleDateString("en-US",{month: 'long',day: 'numeric',year: 'numeric'})}</time></div>                    
                     <h2>{post.title}</h2>
                   </div>
                 </article>
@@ -64,7 +64,7 @@ function Home({ articles }:Props) {
           <button role='see_more' onClick={() => router.push('/news')}>See All News</button>
         </section>
         <section className='our_teams'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3><span className='index-bar-teams'></span></div>
           <div className='teams_grid'>
             <Link href='/teams/#leagueoflegends' scroll={false}>
               <div className='team_container'>
@@ -99,15 +99,16 @@ function Home({ articles }:Props) {
           </div>          
         </section>
         <section className='recent_matches'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Recent Matches</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Recent Results</h3><span className='index-bar-matches'></span></div>
           <div className='match_grid'>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
             <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='' vsteamname='Domino Esports' score='1-0' win= {true}/>
-          </div>          
+          </div> 
+          <button role='see_more' onClick={() => router.push('/')}>See All Matches</button>         
         </section>
         <section className='social_feed'>
-          <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3></div>
+          <div className='section_heading_container'><div className='pill'></div><h3>Social Feed</h3><span className='index-bar-socials'></span></div>
           <div className='twitter_container'>
             <a className="twitter-timeline" data-height="800" data-theme="dark" href="https://twitter.com/Lucent_Esports?ref_src=twsrc%5Etfw">Tweets by Lucent_Esports</a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
           </div>
