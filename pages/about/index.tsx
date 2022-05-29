@@ -64,6 +64,7 @@ function about() {
             </div>          
             <div className='form_container'>
               <form name='contact' method='POST' data-netlify='true'>
+                <input type="hidden" name="form-name" value="contact"></input>
                 <label className='form_item'>
                   <span>Name:</span>
                   <input type='text' name='name' placeholder='Name' required></input>
