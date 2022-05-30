@@ -68,7 +68,7 @@ function Home({ articles }:Props) {
         <section className='recent_matches'>
           <div className='section_heading_container'><div className='pill'></div><h3>Recent Results</h3><span className='index-bar-matches'></span></div>
             <MatchGrid/>
-          <button role='see_more' onClick={() => router.push('/')}>See All Matches</button>         
+          <button role='see_more' onClick={() => router.push('/fixtures')}>See All Matches</button>         
         </section>
         <section className='our_teams'>
           <div className='section_heading_container'><div className='pill'></div><h3>Our Teams</h3><span className='index-bar-teams'></span></div>

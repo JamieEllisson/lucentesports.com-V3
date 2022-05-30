@@ -104,6 +104,10 @@ main{
   padding-block-end: 1rem;
 }
 
+.pageWrapper{
+  max-width: 75rem;
+}
+
 a.anchor {
   display: block;
   position: relative;
@@ -254,7 +258,9 @@ a.anchor {
   min-height: 125px;   
 }
 
-
+.newspage{
+  max-width: 75rem;
+}
 
 .news_item:nth-child(1){  
   border-top: var(--ui-border);

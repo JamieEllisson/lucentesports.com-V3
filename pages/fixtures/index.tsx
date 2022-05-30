@@ -4,7 +4,7 @@ import MatchGrid from '../../components/MatchGrid';
 function Fixtures() {
   const [results,setResults] = useState(false);
   return (
-    <main>
+    <main className='pageWrapper'>
       <section className='teams_heading_container'>
           <h1>Fixtures</h1> 
           <p>Paragraph</p> 

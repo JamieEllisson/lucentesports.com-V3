@@ -7,12 +7,11 @@ import { urlFor } from '../../lib/sanity';
 
 function News({ articles }:Props) {
   return (
-    <main>
-        <section className=''>
-          <div className='teams_heading_container'>
+    <main className='pageWrapper'>
+        <section className='teams_heading_container'>          
             <h1>All News</h1>
-          </div>
-          <div className='news_grid'>
+        </section>
+        <section  className='news_grid'>         
             {articles.map(post =>(
                 <Link key={post._id} href={`news/${post.slug.current}`}>
                   <article className='newspage_item'>
@@ -25,8 +24,7 @@ function News({ articles }:Props) {
                     </div>
                   </article>
                 </Link>
-              ))}
-          </div>
+              ))}          
         </section>
     </main>
   )
