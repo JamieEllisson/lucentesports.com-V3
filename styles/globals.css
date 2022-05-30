@@ -120,6 +120,10 @@ a.anchor {
   font-family: 'gotham';
 }
 
+.none{
+  display: none;
+}
+
 .our_teams,.recent_matches,.social_feed{
   padding-block-start: 1rem;
 }
@@ -242,7 +246,7 @@ a.anchor {
   grid-template-columns: 1fr;  
 }
 
-.news_item{
+.news_item,.newspage_item{
   display: flex;
   padding: 1rem;
   font-family: 'gotham-light';
@@ -250,15 +254,16 @@ a.anchor {
   min-height: 125px;   
 }
 
+
+
 .news_item:nth-child(1){  
   border-top: var(--ui-border);
 }
 
 .news_image_container{  
   position: relative; 
-  min-width: 40%; 
-  overflow: hidden; 
-  
+  min-width: min(40%,180px) ;    
+  overflow: hidden;   
 }
 
 .news_details{
@@ -752,7 +757,7 @@ input[type=text]:focus,textarea:focus{
     padding: 0 1rem;   
   }
 
-  .news_item{
+  .news_item,.newspage_item{
     flex-direction: column;
     padding: 0 ;
     border: none;   

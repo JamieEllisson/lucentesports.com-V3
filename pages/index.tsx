@@ -14,9 +14,11 @@ import GameLogo1 from '../public/img/leagueoflegends-logo.png'
 import GameLogo2 from '../public/img/csgo.png'
 import GameLogo3 from '../public/img/fifa.png'
 import Match from '../components/Match'
+import MatchGrid from '../components/MatchGrid'
+import React from 'react'
 
 function Home({ articles }:Props) {
-  const latest_news = articles.slice(0,3)
+  const latest_news = articles.slice(0,3)  
   return (
     <>
       <Head>
@@ -65,11 +67,7 @@ function Home({ articles }:Props) {
         </section>
         <section className='recent_matches'>
           <div className='section_heading_container'><div className='pill'></div><h3>Recent Results</h3><span className='index-bar-matches'></span></div>
-          <div className='match_grid'>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022 Playoffs' date='2022-04-07' vsteamlogo='' vsteamname='Fløng Esports Elite' score='2-3' win= {false}/>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-24' vsteamlogo='' vsteamname='Lundqvist Lightside' score='1-0' win= {true}/>
-            <Match game={GameLogo1} league='NLC 2nd Div Spring 2022' date='2022-03-22' vsteamlogo='' vsteamname='Domino Esports' score='1-0' win= {true}/>
-          </div> 
+            <MatchGrid/>
           <button role='see_more' onClick={() => router.push('/')}>See All Matches</button>         
         </section>
         <section className='our_teams'>
@@ -119,6 +117,7 @@ function Home({ articles }:Props) {
 }
 
 export default Home
+
 
 interface Props{
   articles: [Article];  

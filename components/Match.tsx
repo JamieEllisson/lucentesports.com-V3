@@ -10,17 +10,27 @@ function Match(props: any) {
     if (props.vsteamlogo == ''){
         hasEnemyLogo = false
     }
+    var game = ''
+    if (props.game == 'lol'){
+        game = '-lol'
+    }
+    if (props.game == 'csgo'){
+        game = '-csgo'
+    }
+    if (props.game == 'fifa'){
+        game = '-fifa'
+    }    
     var lucent = new String("LucentEsports-vs-");
     var enemy = new String(props.vsteamname.toString().replace(/\s+/g, ""));
-    var matchID = lucent.concat(enemy.toString(),"-",props.date.toString());
+    var matchID = lucent.concat(enemy.toString(),"-",props.date.toString(),game.toString());
 
   return (
     <div className={styles.container}>
         <div className={styles.info}>
-            <Image src={props.game} alt='' layout='intrinsic' width={32} height={32}/>
+            <Image src={props.gamelogo} alt='' layout='intrinsic' width={32} height={32}/>
             <h4>{props.league}</h4>
             <time dateTime={props.date}>{props.date}</time>
-            <Link href={`/teams/matches/${matchID}`}>
+            <Link href={`/fixtures/matches/${matchID}`}>
                 <a><h5>See Match Details  &#8250;</h5></a>
             </Link>            
         </div>
