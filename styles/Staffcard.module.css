@@ -1,0 +1,68 @@
+.container{
+    padding-inline: 1rem;
+    margin-inline: auto;
+    color: var(--font-clr-dark);
+    height: 100%;
+}
+  
+.staffcard{
+    position: relative;
+    max-width: 456px;
+    width: 100%;
+    height: 100%;
+    border: var(--ui-border);
+    background-color: #eeeeee;
+}
+  
+.image_container{
+    position: relative;
+    width: 100%;
+    margin-inline: auto;
+}
+  
+.info_container,.staffcard_image_container{
+    background-color: #eeeeee;
+}
+  
+.info_container{  
+    padding: 1rem 1rem 4rem 1rem;
+    
+}
+  
+.info_container h3{
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+  
+.info_container h4{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-stretch: 75%;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #E5213A;
+    padding-block-end: 0.75rem;
+}
+  
+.info_container p{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;  
+}
+  
+.info_socials_container{
+    position: absolute;
+    bottom: 0.75rem;
+    left: 1rem;
+    display: flex;  
+}
+  
+.info_socials_container h6{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-inline-end: 0.5rem;  
+}
+  
+.info_socials_container h6 a{
+    color: var(--font-clr-dark);  
+}

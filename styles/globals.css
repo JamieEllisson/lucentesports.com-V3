@@ -1,9 +1,7 @@
 /* Imports and Fonts */
-
 @import "react-slideshow-image/dist/styles.css";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,400;100,300;100,350;100,400;100,500;100,600;100,700;100,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/*Gotham Font */
 @font-face {
   font-family: 'gotham';
   src: url('/fonts/gotham-black-webfont.woff2') format('woff2'),
@@ -20,24 +18,7 @@
   font-style: normal; 
 }
 
-@font-face {
-  font-family: 'maldinibold';
-  src: url('/fonts/maldinibold-eaqgw-webfont.woff2') format('woff2'),
-       url('/fonts/maldinibold-eaqgw-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'maldininormal';
-  src: url('/fonts/maldininormal-zvkg3-webfont.woff2') format('woff2'),
-       url('/fonts/maldininormal-zvkg3-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* CSS Reset */
-
 *,
 *::before,
 *::after{
@@ -63,14 +44,12 @@ button{
 }
 
 /* Custom Properties */
-
-:root{
-  /* Background Colours */
+:root{ 
   --bg-dark: hsl(222 63% 3%);
   --bg-dark-opacity95: hsl(222 63% 3% / 0.95);
   --bg-light: hsl(0 0% 100%);
   --bg-light-opacity90: hsl(0 0% 100% / 0.9);
-  /* Ui Colours */
+ 
   --ui-black: hsl(0 0% 5%);
   --ui-white: hsl(0 0% 100%);
   --ui-white-opacity40: hsl(0 0% 100% / 0.4);
@@ -80,15 +59,14 @@ button{
   --ui-grey-dark: rgb(34,38,47);
   --ui-grey-dark-opacity40: rgb(34 38 47 / 0.4);
   --ui-accent: hsl(0, 100%, 40%);  
-   /* Font Colours */
-   --font-clr-light: hsl(0 0% 100%);
-   --font-clr-dark: hsl(0 0% 5%);
-   /* Borders */
+ 
+  --font-clr-light: hsl(0 0% 100%);
+  --font-clr-dark: hsl(0 0% 5%);
+   
   --ui-border: solid 1px var(--ui-grey-dark);
 }
 
 /* Global CSS */
-
 html,
 body{  
   scroll-behavior: smooth;
@@ -128,6 +106,38 @@ a.anchor {
   display: none;
 }
 
+.dot{
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: var(--ui-grey-light);
+  border-radius: 50%;
+  display: inline-block;
+  margin-inline: 0.25rem;
+}
+
+.pill{
+  content: '';
+  height: inherit;
+  width: 0.25rem;
+  border-radius: 100vw;  
+  background-color: var(--ui-accent);
+  color: var(--ui-accent);
+  margin-inline-end: 0.5rem;
+}
+
+.section_heading_container{
+  position: relative;
+  display: flex;
+  padding: 1.5rem 1rem;  
+}
+
+.section_heading_container h3{
+  font-family: 'gotham-light';
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.75rem;  
+}
+/*--------------------*/
 .our_teams,.recent_matches,.social_feed{
   padding-block-start: 1rem;
 }
@@ -152,16 +162,14 @@ a.anchor {
 }
 
 .index_hero_text h1{
-  font-family: 'Bebas Neue' ;
-  letter-spacing: 6px;
+  font-family: sans-serif ;  
   font-size: 6rem;
   line-height: 1;
   text-shadow: 4px 4px 8px var(--bg-dark);
 }
 
 .index_hero_text h6{
-  font-family: 'Bebas Neue' ;
-  letter-spacing: 2px;
+  font-family: sans-serif ;  
   font-size: 1.75rem;
   line-height: 2rem;
   text-shadow: 4px 4px 8px var(--bg-dark);
@@ -185,12 +193,10 @@ a.anchor {
 .prevArrow path, .nextArrow path{
   fill: var(--ui-accent);
 }
-
+/*--------------------*/
 .socials{
-  background-color: var(--ui-grey-dark-opacity40);
-  
-  height: max-content;  
- 
+  background-color: var(--ui-grey-dark-opacity40);  
+  height: max-content;   
 }
 
 .socials_list{
@@ -216,33 +222,10 @@ a.anchor {
   height: 24px;
   width: 24px;
 }
-
+/*--------------------*/
 .latest_news{
   max-width: 75rem;  
   margin-inline: auto;
-}
-
-.section_heading_container{
-  position: relative;
-  display: flex;
-  padding: 1.5rem 1rem;  
-}
-
-.section_heading_container h3{
-  font-family: 'gotham-light';
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  line-height: 1.75rem;  
-}
-
-.pill{
-  content: '';
-  height: inherit;
-  width: 0.25rem;
-  border-radius: 100vw;  
-  background-color: var(--ui-accent);
-  color: var(--ui-accent);
-  margin-inline-end: 0.5rem;
 }
 
 .news_grid{
@@ -295,15 +278,6 @@ a.anchor {
   padding-block-start: 0.25rem;
 }
 
-.dot{
-  height: 0.3rem;
-  width: 0.3rem;
-  background-color: var(--ui-grey-light);
-  border-radius: 50%;
-  display: inline-block;
-  margin-inline: 0.25rem;
-}
-
 button[role=see_more]{
   cursor: pointer;
   display: flex;
@@ -324,7 +298,7 @@ button[role=see_more]:hover{
   color: var(--font-clr-light);
   border-color: var(--font-clr-light);
 }
-
+/*--------------------*/
 .our_teams{
   max-width: 75rem;  
   margin-inline: auto;
@@ -384,7 +358,7 @@ button[role=see_more]:hover{
   opacity: 1;
   transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
+/*--------------------*/
 .recent_matches{
   max-width: 75rem;  
   margin-inline: auto;
@@ -402,7 +376,6 @@ button[role=see_more]:hover{
 }
 
 /* Teams Page */
-
 .team_section_container{
   max-width: 75rem;
   margin-inline: auto;
@@ -463,13 +436,10 @@ button[role=view_profile]:hover{
 
 
 /* About Page */
-
 .about_lucent, .about_partners, .about_staff,.about_achievements,.about_contact{
   max-width: 75rem;
   margin-inline: auto;
 }
-
-
 
 .about_lucent_container{
   display: flex;
@@ -517,78 +487,7 @@ button[role=view_profile]:hover{
   grid-template-columns: repeat(auto-fit, minmax(min(302px,100%),1fr));
   gap: 1.5rem 0;
 }
-
-/* Staffcard */
-
-.staffcard_container{
-  padding-inline: 1rem;
-  margin-inline: auto;
-  color: var(--font-clr-dark);
-  height: 100%;
-}
-
-.staffcard{
-  position: relative;
-  max-width: 456px;
-  width: 100%;
-  height: 100%;
-  border: var(--ui-border);
-  background-color: #eeeeee;
-}
-
-.staffcard_image_container{
-  position: relative;
-  width: 100%;
-  margin-inline: auto;
-}
-
-.staffcard_info_container,.staffcard_image_container{
-  background-color: #eeeeee;
-}
-
-.staffcard_info_container{  
-  padding: 1rem 1rem 4rem 1rem;
-  
-}
-
-.staffcard_info_container h3{
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-}
-
-.staffcard_info_container h4{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-stretch: 75%;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  color: #E5213A;
-  padding-block-end: 0.75rem;
-}
-
-.staffcard_info_container p{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  margin: 0;  
-}
-
-.staffcard_info_socials_container{
-  position: absolute;
-  bottom: 0.75rem;
-  left: 1rem;
-  display: flex;  
-}
-
-.staffcard_info_socials_container h6{
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding-inline-end: 0.5rem;  
-}
-
-.staffcard_info_socials_container h6 a{
-  color: var(--font-clr-dark);  
-}
-
+/*--------------------*/
 .achievements_content_container{
   display: flex;
   justify-content: center;
@@ -616,9 +515,7 @@ button[role=view_profile]:hover{
   display: none;
   position: relative;
 }
-
-
-
+/*--------------------*/
 .contact_content_container{
   display: flex;
   justify-content: center;
@@ -631,8 +528,7 @@ button[role=view_profile]:hover{
   padding-inline-end: 4rem; 
 }
 
-.contact_image_container{
-  
+.contact_image_container{  
   position: relative;
   width: 100%;
   height: 100%;
@@ -666,7 +562,6 @@ button[role=view_profile]:hover{
   text-transform: uppercase;
 }
 
-
 input[type=text],textarea{
   background-color: var(--bg-dark); 
   border: var(--ui-border);
@@ -686,6 +581,7 @@ input[type=text]:focus,textarea:focus{
   outline: solid 1px var(--ui-accent);
 }
 
+/* Media Queries */
 @media screen and (min-width:40rem) {
 
   .index_hero_text{
